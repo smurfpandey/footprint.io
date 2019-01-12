@@ -2,6 +2,7 @@
 #mainNav {
   border-bottom: 1px solid fade-out($gray-900, .9);
   background-color: $white;
+  visibility: hidden;
   @include sans-serif-font;
   @include transition-all;
   .navbar-brand {

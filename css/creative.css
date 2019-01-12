@@ -1,6 +1,6 @@
 /*!
- * Start Bootstrap - Creative v5.0.2 (https://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2018 Start Bootstrap
+ * Start Bootstrap - footprint.io v5.0.2 ()
+ * Copyright 2013-2019 
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
 
@@ -59,6 +59,10 @@ section {
   padding: 8rem 0;
 }
 
+section#contact {
+  padding: 4rem 0;
+}
+
 .section-heading {
   margin-top: 0;
 }
@@ -93,6 +97,7 @@ img::-moz-selection {
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
+  visibility: hidden;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -178,7 +183,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/bg-footprint-1.png");
   background-position: center center;
   background-size: cover;
 }

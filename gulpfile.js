@@ -19,52 +19,6 @@ const banner = ['/*!\n',
   '\n'
 ].join('');
 
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function(cb) {
-
-  // Bootstrap
-  gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
-
-  // Font Awesome
-  gulp.src([
-      './node_modules/@fortawesome/**/*',
-    ])
-    .pipe(gulp.dest('./vendor'))
-
-  // jQuery
-  gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'))
-
-  // jQuery Easing
-  gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery-easing'))
-
-  // Magnific Popup
-  gulp.src([
-      './node_modules/magnific-popup/dist/*'
-    ])
-    .pipe(gulp.dest('./vendor/magnific-popup'))
-
-  // Scrollreveal
-  gulp.src([
-      './node_modules/scrollreveal/dist/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/scrollreveal'))
-
-  cb();
-
-});
-
 // CSS task
 function css() {
   return gulp
@@ -137,7 +91,7 @@ function watchFiles() {
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
-gulp.task("default", gulp.parallel('vendor', css, js));
+gulp.task("default", gulp.parallel(css, js));
 
 // dev task
 gulp.task("dev", gulp.parallel(watchFiles, browserSync));
